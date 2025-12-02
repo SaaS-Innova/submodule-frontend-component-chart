@@ -1,4 +1,3 @@
-import React from "react";
 import { Chart } from "primereact/chart";
 import { ICommonChartProps } from "./chart.model";
 import { ChartTypes } from "./chart.constant";
