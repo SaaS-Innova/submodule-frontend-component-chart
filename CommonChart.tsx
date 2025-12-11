@@ -13,6 +13,8 @@ const CommonChart = (props: ICommonChartProps) => {
     beginAtZero = true,
     title,
     stepSize,
+    legendPosition,
+    legendLabelStyle = false,
   } = props;
   const scales = {
     x: {
@@ -36,7 +38,9 @@ const CommonChart = (props: ICommonChartProps) => {
   };
   const plugins = {
     legend: {
+      position: legendPosition || "top",
       labels: {
+        usePointStyle: legendLabelStyle,
         color: xyAxisColor,
       },
     },
