@@ -28,6 +28,7 @@ export interface ICommonChartProps {
   stepSize?: number;
   legendPosition?: string;
   legendLabelStyle?: boolean;
+  indexAxis?: string;
 }
 
 export type IChartTypes = (typeof ChartTypes)[keyof typeof ChartTypes];

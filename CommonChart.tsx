@@ -15,6 +15,7 @@ const CommonChart = (props: ICommonChartProps) => {
     stepSize,
     legendPosition,
     legendLabelStyle = false,
+    indexAxis = "x",
   } = props;
   const scales = {
     x: {
@@ -49,6 +50,7 @@ const CommonChart = (props: ICommonChartProps) => {
   const chartsWithoutScales = [ChartTypes.PIE];
 
   const options = {
+    indexAxis: indexAxis,
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
