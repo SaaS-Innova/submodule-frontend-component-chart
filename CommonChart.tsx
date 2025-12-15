@@ -16,6 +16,7 @@ const CommonChart = (props: ICommonChartProps) => {
     legendPosition,
     legendLabelStyle = false,
     indexAxis = "x",
+    borderRadius = 8,
   } = props;
   const scales = {
     x: {
@@ -49,6 +50,21 @@ const CommonChart = (props: ICommonChartProps) => {
   };
   const chartsWithoutScales = [ChartTypes.PIE];
 
+  const barBorderRadius =
+    indexAxis === "y"
+      ? {
+          topLeft: 0,
+          topRight: borderRadius,
+          bottomLeft: 0,
+          bottomRight: borderRadius,
+        }
+      : {
+          topLeft: borderRadius,
+          topRight: borderRadius,
+          bottomLeft: 0,
+          bottomRight: 0,
+        };
+
   const options = {
     indexAxis: indexAxis,
     responsive: true,
@@ -57,6 +73,7 @@ const CommonChart = (props: ICommonChartProps) => {
       mode: "nearest",
       intersect: false,
     },
+    borderRadius: barBorderRadius,
     plugins,
     scales: chartsWithoutScales?.includes(type) ? undefined : scales,
   };

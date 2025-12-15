@@ -29,6 +29,7 @@ export interface ICommonChartProps {
   legendPosition?: string;
   legendLabelStyle?: boolean;
   indexAxis?: string;
+  borderRadius?: number;
 }
 
 export type IChartTypes = (typeof ChartTypes)[keyof typeof ChartTypes];
