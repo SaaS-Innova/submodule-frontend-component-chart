@@ -47,6 +47,9 @@ const CommonChart = (props: ICommonChartProps) => {
       },
     },
     title: title,
+    tooltip: {
+      axis: indexAxis === "y" ? "y" : "x",
+    },
   };
   const chartsWithoutScales = [ChartTypes.PIE];
 
