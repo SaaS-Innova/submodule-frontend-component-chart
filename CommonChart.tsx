@@ -17,6 +17,7 @@ const CommonChart = (props: ICommonChartProps) => {
     legendLabelStyle = false,
     indexAxis = "x",
     borderRadius = 8,
+    options: optionsOverride,
   } = props;
   const scales = {
     x: {
@@ -51,7 +52,7 @@ const CommonChart = (props: ICommonChartProps) => {
       axis: indexAxis === "y" ? "y" : "x",
     },
   };
-  const chartsWithoutScales = [ChartTypes.PIE];
+  const chartsWithoutScales = [ChartTypes.PIE, ChartTypes.DOUGHNUT];
 
   const barBorderRadius =
     indexAxis === "y"
@@ -68,7 +69,7 @@ const CommonChart = (props: ICommonChartProps) => {
           bottomRight: 0,
         };
 
-  const options = {
+  const options = optionsOverride ?? {
     indexAxis: indexAxis,
     responsive: true,
     maintainAspectRatio: false,
