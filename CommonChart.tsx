@@ -18,6 +18,7 @@ const CommonChart = (props: ICommonChartProps) => {
     indexAxis = "x",
     borderRadius = 8,
     options: optionsOverride,
+    plugins: chartPlugins,
   } = props;
   const scales = {
     x: {
@@ -86,6 +87,7 @@ const CommonChart = (props: ICommonChartProps) => {
       type={type}
       data={data}
       options={options}
+      plugins={chartPlugins}
       height={height}
       width={width}
     />

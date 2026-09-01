@@ -36,6 +36,7 @@ export interface ICommonChartProps {
    * need custom scales, tooltips or multi-axis config.
    */
   options?: object;
+  plugins?: object[];
 }
 
 export type IChartTypes = (typeof ChartTypes)[keyof typeof ChartTypes];
